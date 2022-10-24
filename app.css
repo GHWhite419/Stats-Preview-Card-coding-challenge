@@ -1,0 +1,217 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Galen's code */
+body {
+    background-color: hsl(233, 47%, 7%);
+    color: hsla(0, 0%, 75%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: hsl(244, 38%, 16%);
+    max-width: 20rem;
+    align-self: center;
+    border-radius: 1rem;
+}
+
+.img-mobile {
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.filter-mobile {
+    background: hsla(277, 100%, 44%, 0.5);
+    width: 20rem;
+    height: 14.7rem;
+    position: absolute;
+    margin-top: -14.7rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.img-desktop {
+    display: none;
+    max-width: 27rem;
+    border-radius: 0rem 1rem 1rem 0rem;
+}
+
+article {
+    text-align: center;
+    padding: 2rem;
+    padding-bottom: 1.2rem;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+p {
+    font-size: 0.9rem;
+    padding-top: 1rem;
+}
+
+ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+li {
+    list-style: none;
+    padding: 0.8rem;
+}
+
+h2 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+h3 {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+.attribution a {
+    color: hsl(277, 64%, 61%);
+}
+
+@media (min-width: 900px) {
+    .img-mobile {
+        display: none;
+    }
+
+    .filter-mobile {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        max-width: 56rem;
+    }
+
+    article {
+        text-align: left;
+        max-width: 24rem;
+        margin-right: 5rem;
+        padding-left: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 0.75rem;
+    }
+
+    ul {
+        display: flex;
+        padding-top: 1rem;
+    }
+
+    .filter-desktop {
+        background: hsla(277, 100%, 44%, 0.5);
+        position: absolute;
+        width: 27rem;
+        height: 22.3rem;
+        margin-left: 29rem;
+        border-radius: 0rem 1rem 1rem 0rem;
+    }
+
+    .img-desktop {
+        display: flex;
+    }
+}
